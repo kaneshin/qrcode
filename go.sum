@@ -1,0 +1,6 @@
+github.com/maruel/rs v0.0.0-20150922171536-2c81c4312fe4 h1:u9jwvcKbQpghIXgNl/EOL8hzhAFXh4ePrEP493W3tNA=
+github.com/maruel/rs v0.0.0-20150922171536-2c81c4312fe4/go.mod h1:kcRFpEzolcEklV6rD7W95mG49/sbdX/PlFmd7ni3RvA=
+github.com/skip2/go-qrcode v0.0.0-20171229120447-cf5f9fa2f0d8 h1:5C4yAeYifeRO+7z2/H2kxL8tJZE9ZE9LpxK6YUZPByo=
+github.com/skip2/go-qrcode v0.0.0-20171229120447-cf5f9fa2f0d8/go.mod h1:PLPIyL7ikehBD1OAjmKKiOEhbvWyHGaNDjquXMcYABo=
+github.com/tuotoo/qrcode v0.0.0-20180918164536-fe9894c01997 h1:bzMxBN46oA9WatuUD0wmeQ17P2Um+686WwT4o1atz1Y=
+github.com/tuotoo/qrcode v0.0.0-20180918164536-fe9894c01997/go.mod h1:po3qs7h8otu6LW8Z+uDfiiGqR00w0Op+BJAMAAl1yu4=
