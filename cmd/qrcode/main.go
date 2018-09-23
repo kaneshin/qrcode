@@ -57,31 +57,22 @@ func do(r io.Reader) error {
 }
 
 func run() error {
-	fi, err := os.Stdin.Stat()
-	if err != nil {
-		return err
+	var name string
+	if args := flag.Args(); len(args) > 0 {
+		name = args[0]
 	}
 
 	var r io.Reader
-	if fi.Mode()&os.ModeNamedPipe == os.ModeNamedPipe {
+	switch name {
+	case "", "-":
 		r = os.Stdin
-	} else {
-		args := flag.Args()
-		if len(args) == 0 {
-			r = os.Stdin
-		} else {
-			name := args[0]
-			if name == "-" {
-				r = os.Stdin
-			} else {
-				f, err := os.Open(name)
-				if err != nil {
-					return err
-				}
-				defer f.Close()
-				r = f
-			}
+	default:
+		f, err := os.Open(name)
+		if err != nil {
+			panic(err)
 		}
+		defer f.Close()
+		r = f
 	}
 
 	return do(r)
