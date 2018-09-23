@@ -70,12 +70,17 @@ func run() error {
 		if len(args) == 0 {
 			r = os.Stdin
 		} else {
-			f, err := os.Open(args[0])
-			if err != nil {
-				return err
+			name := args[0]
+			if name == "-" {
+				r = os.Stdin
+			} else {
+				f, err := os.Open(name)
+				if err != nil {
+					return err
+				}
+				defer f.Close()
+				r = f
 			}
-			defer f.Close()
-			r = f
 		}
 	}
 
