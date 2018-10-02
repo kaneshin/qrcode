@@ -13,6 +13,7 @@ func main() {
 	flag.StringVar(&c.SSID, "ssid", "", "")
 	flag.StringVar(&c.Password, "password", "", "")
 	flag.StringVar(&c.Type, "type", "", "")
+	flag.BoolVar(&c.IsHidden, "hidden", false, "")
 	flag.Parse()
 	fmt.Print(c.String())
 }
